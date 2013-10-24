@@ -17,6 +17,9 @@
 		E963429B1819BB18004C7FF3 /* MIBAboutController.m in Sources */ = {isa = PBXBuildFile; fileRef = E96342961819BB18004C7FF3 /* MIBAboutController.m */; };
 		E963429C1819BB18004C7FF3 /* MIBAboutRow.m in Sources */ = {isa = PBXBuildFile; fileRef = E96342981819BB18004C7FF3 /* MIBAboutRow.m */; };
 		E963429D1819BB18004C7FF3 /* MIBAboutSection.m in Sources */ = {isa = PBXBuildFile; fileRef = E963429A1819BB18004C7FF3 /* MIBAboutSection.m */; };
+		E96342E81819BE31004C7FF3 /* MIBAboutController.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = E96342951819BB18004C7FF3 /* MIBAboutController.h */; };
+		E96342E91819BE31004C7FF3 /* MIBAboutRow.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = E96342971819BB18004C7FF3 /* MIBAboutRow.h */; };
+		E96342EA1819BE31004C7FF3 /* MIBAboutSection.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = E96342991819BB18004C7FF3 /* MIBAboutSection.h */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +39,9 @@
 			dstPath = "include/$(PRODUCT_NAME)";
 			dstSubfolderSpec = 16;
 			files = (
+				E96342E81819BE31004C7FF3 /* MIBAboutController.h in CopyFiles */,
+				E96342E91819BE31004C7FF3 /* MIBAboutRow.h in CopyFiles */,
+				E96342EA1819BE31004C7FF3 /* MIBAboutSection.h in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -51,12 +57,12 @@
 		E96342871819BAED004C7FF3 /* MIBAboutControllerTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "MIBAboutControllerTests-Info.plist"; sourceTree = "<group>"; };
 		E96342891819BAED004C7FF3 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		E963428B1819BAED004C7FF3 /* MIBAboutControllerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MIBAboutControllerTests.m; sourceTree = "<group>"; };
-		E96342951819BB18004C7FF3 /* MIBAboutController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MIBAboutController.h; path = MIBAboutController/MIBAboutController.h; sourceTree = "<group>"; };
-		E96342961819BB18004C7FF3 /* MIBAboutController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MIBAboutController.m; path = MIBAboutController/MIBAboutController.m; sourceTree = "<group>"; };
-		E96342971819BB18004C7FF3 /* MIBAboutRow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MIBAboutRow.h; path = MIBAboutController/MIBAboutRow.h; sourceTree = "<group>"; };
-		E96342981819BB18004C7FF3 /* MIBAboutRow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MIBAboutRow.m; path = MIBAboutController/MIBAboutRow.m; sourceTree = "<group>"; };
-		E96342991819BB18004C7FF3 /* MIBAboutSection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MIBAboutSection.h; path = MIBAboutController/MIBAboutSection.h; sourceTree = "<group>"; };
-		E963429A1819BB18004C7FF3 /* MIBAboutSection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MIBAboutSection.m; path = MIBAboutController/MIBAboutSection.m; sourceTree = "<group>"; };
+		E96342951819BB18004C7FF3 /* MIBAboutController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MIBAboutController.h; sourceTree = "<group>"; };
+		E96342961819BB18004C7FF3 /* MIBAboutController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MIBAboutController.m; sourceTree = "<group>"; };
+		E96342971819BB18004C7FF3 /* MIBAboutRow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MIBAboutRow.h; sourceTree = "<group>"; };
+		E96342981819BB18004C7FF3 /* MIBAboutRow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MIBAboutRow.m; sourceTree = "<group>"; };
+		E96342991819BB18004C7FF3 /* MIBAboutSection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MIBAboutSection.h; sourceTree = "<group>"; };
+		E963429A1819BB18004C7FF3 /* MIBAboutSection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MIBAboutSection.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,12 +91,6 @@
 		E96342631819BAED004C7FF3 = {
 			isa = PBXGroup;
 			children = (
-				E96342951819BB18004C7FF3 /* MIBAboutController.h */,
-				E96342961819BB18004C7FF3 /* MIBAboutController.m */,
-				E96342971819BB18004C7FF3 /* MIBAboutRow.h */,
-				E96342981819BB18004C7FF3 /* MIBAboutRow.m */,
-				E96342991819BB18004C7FF3 /* MIBAboutSection.h */,
-				E963429A1819BB18004C7FF3 /* MIBAboutSection.m */,
 				E96342711819BAED004C7FF3 /* MIBAboutController */,
 				E96342851819BAED004C7FF3 /* MIBAboutControllerTests */,
 				E963426E1819BAED004C7FF3 /* Frameworks */,
@@ -120,6 +120,12 @@
 		E96342711819BAED004C7FF3 /* MIBAboutController */ = {
 			isa = PBXGroup;
 			children = (
+				E96342951819BB18004C7FF3 /* MIBAboutController.h */,
+				E96342961819BB18004C7FF3 /* MIBAboutController.m */,
+				E96342971819BB18004C7FF3 /* MIBAboutRow.h */,
+				E96342981819BB18004C7FF3 /* MIBAboutRow.m */,
+				E96342991819BB18004C7FF3 /* MIBAboutSection.h */,
+				E963429A1819BB18004C7FF3 /* MIBAboutSection.m */,
 				E96342721819BAED004C7FF3 /* Supporting Files */,
 			);
 			path = MIBAboutController;
@@ -419,6 +425,7 @@
 				E96342911819BAED004C7FF3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		E96342921819BAED004C7FF3 /* Build configuration list for PBXNativeTarget "MIBAboutControllerTests" */ = {
 			isa = XCConfigurationList;
@@ -427,6 +434,7 @@
 				E96342941819BAED004C7FF3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
