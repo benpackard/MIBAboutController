@@ -8,14 +8,15 @@
 
 /* Begin PBXBuildFile section */
 		E96342701819BAED004C7FF3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E963426F1819BAED004C7FF3 /* Foundation.framework */; };
-		E96342751819BAED004C7FF3 /* MIBAboutController.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = E96342741819BAED004C7FF3 /* MIBAboutController.h */; };
-		E96342771819BAED004C7FF3 /* MIBAboutController.m in Sources */ = {isa = PBXBuildFile; fileRef = E96342761819BAED004C7FF3 /* MIBAboutController.m */; };
 		E963427E1819BAED004C7FF3 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E963427D1819BAED004C7FF3 /* XCTest.framework */; };
 		E963427F1819BAED004C7FF3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E963426F1819BAED004C7FF3 /* Foundation.framework */; };
 		E96342811819BAED004C7FF3 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E96342801819BAED004C7FF3 /* UIKit.framework */; };
 		E96342841819BAED004C7FF3 /* libMIBAboutController.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E963426C1819BAED004C7FF3 /* libMIBAboutController.a */; };
 		E963428A1819BAED004C7FF3 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = E96342881819BAED004C7FF3 /* InfoPlist.strings */; };
 		E963428C1819BAED004C7FF3 /* MIBAboutControllerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E963428B1819BAED004C7FF3 /* MIBAboutControllerTests.m */; };
+		E963429B1819BB18004C7FF3 /* MIBAboutController.m in Sources */ = {isa = PBXBuildFile; fileRef = E96342961819BB18004C7FF3 /* MIBAboutController.m */; };
+		E963429C1819BB18004C7FF3 /* MIBAboutRow.m in Sources */ = {isa = PBXBuildFile; fileRef = E96342981819BB18004C7FF3 /* MIBAboutRow.m */; };
+		E963429D1819BB18004C7FF3 /* MIBAboutSection.m in Sources */ = {isa = PBXBuildFile; fileRef = E963429A1819BB18004C7FF3 /* MIBAboutSection.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,7 +36,6 @@
 			dstPath = "include/$(PRODUCT_NAME)";
 			dstSubfolderSpec = 16;
 			files = (
-				E96342751819BAED004C7FF3 /* MIBAboutController.h in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -45,14 +45,18 @@
 		E963426C1819BAED004C7FF3 /* libMIBAboutController.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libMIBAboutController.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		E963426F1819BAED004C7FF3 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		E96342731819BAED004C7FF3 /* MIBAboutController-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MIBAboutController-Prefix.pch"; sourceTree = "<group>"; };
-		E96342741819BAED004C7FF3 /* MIBAboutController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MIBAboutController.h; sourceTree = "<group>"; };
-		E96342761819BAED004C7FF3 /* MIBAboutController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MIBAboutController.m; sourceTree = "<group>"; };
 		E963427C1819BAED004C7FF3 /* MIBAboutControllerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MIBAboutControllerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E963427D1819BAED004C7FF3 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		E96342801819BAED004C7FF3 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
 		E96342871819BAED004C7FF3 /* MIBAboutControllerTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "MIBAboutControllerTests-Info.plist"; sourceTree = "<group>"; };
 		E96342891819BAED004C7FF3 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		E963428B1819BAED004C7FF3 /* MIBAboutControllerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MIBAboutControllerTests.m; sourceTree = "<group>"; };
+		E96342951819BB18004C7FF3 /* MIBAboutController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MIBAboutController.h; path = MIBAboutController/MIBAboutController.h; sourceTree = "<group>"; };
+		E96342961819BB18004C7FF3 /* MIBAboutController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MIBAboutController.m; path = MIBAboutController/MIBAboutController.m; sourceTree = "<group>"; };
+		E96342971819BB18004C7FF3 /* MIBAboutRow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MIBAboutRow.h; path = MIBAboutController/MIBAboutRow.h; sourceTree = "<group>"; };
+		E96342981819BB18004C7FF3 /* MIBAboutRow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MIBAboutRow.m; path = MIBAboutController/MIBAboutRow.m; sourceTree = "<group>"; };
+		E96342991819BB18004C7FF3 /* MIBAboutSection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MIBAboutSection.h; path = MIBAboutController/MIBAboutSection.h; sourceTree = "<group>"; };
+		E963429A1819BB18004C7FF3 /* MIBAboutSection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MIBAboutSection.m; path = MIBAboutController/MIBAboutSection.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +85,12 @@
 		E96342631819BAED004C7FF3 = {
 			isa = PBXGroup;
 			children = (
+				E96342951819BB18004C7FF3 /* MIBAboutController.h */,
+				E96342961819BB18004C7FF3 /* MIBAboutController.m */,
+				E96342971819BB18004C7FF3 /* MIBAboutRow.h */,
+				E96342981819BB18004C7FF3 /* MIBAboutRow.m */,
+				E96342991819BB18004C7FF3 /* MIBAboutSection.h */,
+				E963429A1819BB18004C7FF3 /* MIBAboutSection.m */,
 				E96342711819BAED004C7FF3 /* MIBAboutController */,
 				E96342851819BAED004C7FF3 /* MIBAboutControllerTests */,
 				E963426E1819BAED004C7FF3 /* Frameworks */,
@@ -110,8 +120,6 @@
 		E96342711819BAED004C7FF3 /* MIBAboutController */ = {
 			isa = PBXGroup;
 			children = (
-				E96342741819BAED004C7FF3 /* MIBAboutController.h */,
-				E96342761819BAED004C7FF3 /* MIBAboutController.m */,
 				E96342721819BAED004C7FF3 /* Supporting Files */,
 			);
 			path = MIBAboutController;
@@ -224,7 +232,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E96342771819BAED004C7FF3 /* MIBAboutController.m in Sources */,
+				E963429B1819BB18004C7FF3 /* MIBAboutController.m in Sources */,
+				E963429D1819BB18004C7FF3 /* MIBAboutSection.m in Sources */,
+				E963429C1819BB18004C7FF3 /* MIBAboutRow.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

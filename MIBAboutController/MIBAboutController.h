@@ -1,13 +1,27 @@
 //
 //  MIBAboutController.h
-//  MIBAboutController
+//  NoHitterAlerts
 //
-//  Created by Ben Packard on 10/24/13.
-//  Copyright (c) 2013 Ben Packard. All rights reserved.
+//  Created by Ben Packard on 10/19/13.
+//  Copyright (c) 2013 Made in Bletchley. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 
-@interface MIBAboutController : NSObject
+@protocol MIBAboutDelegate;
+
+@interface MIBAboutController : UITableViewController
+
+@property (nonatomic, weak) id <MIBAboutDelegate> delegate;
+@property NSArray *sections;
+@property NSString *headerText, *footerText;
+@property NSDictionary *tableHeaderFooterAttributes, *sectionTextAttributes, *rowTextAttributes;
+
+@end
+
+
+@protocol MIBAboutDelegate <NSObject>
+
+- (void)aboutViewClosedByController:(MIBAboutController *)controller;
 
 @end
