@@ -136,12 +136,15 @@ static CGFloat const kHeaderFooterMargin = 15;
 
 - (CGFloat)heightForHeaderOrFooterBasedOnText:(NSString *)text attributes:(NSDictionary *)attributes
 {
+	NSLog(@"received %@", text);
 	//return the height required for the provided text, given the font, margin, etc
 	CGRect boundingRect = [text boundingRectWithSize:CGSizeMake(self.tableView.bounds.size.width - (2 * kHeaderFooterMargin), MAXFLOAT)
 											 options:NSStringDrawingUsesLineFragmentOrigin | NSStringDrawingUsesFontLeading
 										  attributes:attributes
 											 context:nil];
+	NSLog(@"returning %f", ceilf(boundingRect.size.height + (2 * kHeaderFooterMargin)));
 	return ceilf(boundingRect.size.height + (2 * kHeaderFooterMargin));
+#warning the tableheaderview and tablefooterview are 30 pts too short. all other views (section headers etc_ get a bonus 30 pts added. why?
 }
 
 #pragma mark - tableview actions
