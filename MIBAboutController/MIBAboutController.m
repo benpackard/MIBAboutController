@@ -53,8 +53,13 @@ static CGFloat const kHeaderFooterMargin = 15;
 	//add a close button
 	UIBarButtonItem *closeButton = [[UIBarButtonItem alloc] initWithTitle:@"Close" style:UIBarButtonItemStyleDone target:self action:@selector(close)];
 	self.navigationItem.rightBarButtonItem = closeButton;
+}
+
+- (void)viewWillAppear:(BOOL)animated
+{
+	[super viewWillAppear:animated];
 	
-	//add the table header and footer
+	//add the table header and footer - set here since the bounds of the tableview aren't yet known in viewDidLoad
 	if (self.headerText)
 	{
 		self.tableView.tableHeaderView = [self headerOrFooterViewWithText:self.headerText attributes:self.tableHeaderFooterAttributes];
@@ -65,6 +70,20 @@ static CGFloat const kHeaderFooterMargin = 15;
 		self.tableView.tableFooterView = [self headerOrFooterViewWithText:self.footerText attributes:self.tableHeaderFooterAttributes];
 	}
 }
+
+- (void)didRotateFromInterfaceOrientation:(UIInterfaceOrientation)fromInterfaceOrientation
+{
+	//re-add the table header and footer - this is a little hacky but without it the header/footer is not resized correctly on rotation
+	if (self.headerText)
+	{
+		self.tableView.tableHeaderView = [self headerOrFooterViewWithText:self.headerText attributes:self.tableHeaderFooterAttributes];
+	}
+	if (self.footerText)
+	{
+		self.tableView.tableFooterView = [self headerOrFooterViewWithText:self.footerText attributes:self.tableHeaderFooterAttributes];
+	}
+}
+
 
 #pragma mark - tableview datasource
 
@@ -136,15 +155,12 @@ static CGFloat const kHeaderFooterMargin = 15;
 
 - (CGFloat)heightForHeaderOrFooterBasedOnText:(NSString *)text attributes:(NSDictionary *)attributes
 {
-	NSLog(@"received %@", text);
 	//return the height required for the provided text, given the font, margin, etc
 	CGRect boundingRect = [text boundingRectWithSize:CGSizeMake(self.tableView.bounds.size.width - (2 * kHeaderFooterMargin), MAXFLOAT)
 											 options:NSStringDrawingUsesLineFragmentOrigin | NSStringDrawingUsesFontLeading
 										  attributes:attributes
 											 context:nil];
-	NSLog(@"returning %f", ceilf(boundingRect.size.height + (2 * kHeaderFooterMargin)));
 	return ceilf(boundingRect.size.height + (2 * kHeaderFooterMargin));
-#warning the tableheaderview and tablefooterview are 30 pts too short. all other views (section headers etc_ get a bonus 30 pts added. why?
 }
 
 #pragma mark - tableview actions
