@@ -144,7 +144,9 @@ static CGFloat const kHeaderFooterMargin = 15;
 {
 	//create a label inside a containing view
 	UIView *containingView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, self.tableView.bounds.size.width, [self heightForHeaderOrFooterBasedOnText:text attributes:attributes])];
+	containingView.backgroundColor = [UIColor whiteColor];
 	UILabel *innerLabel = [[UILabel alloc] initWithFrame:CGRectInset(containingView.bounds, kHeaderFooterMargin, kHeaderFooterMargin)];
+	innerLabel.backgroundColor = [UIColor whiteColor];
 	innerLabel.autoresizingMask = UIViewAutoresizingFlexibleHeight | UIViewAutoresizingFlexibleWidth;
 	innerLabel.numberOfLines = 0;
 	NSAttributedString *attributedString = [[NSAttributedString alloc] initWithString:text attributes:attributes];
