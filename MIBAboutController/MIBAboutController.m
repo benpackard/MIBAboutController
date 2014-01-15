@@ -46,6 +46,8 @@ static CGFloat const kHeaderFooterMargin = 15;
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+	
+	self.tableView.backgroundColor = [UIColor groupTableViewBackgroundColor];
 		
 	//register cell types
 	[self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"Cell"];
